@@ -1,14 +1,15 @@
-import { Box, Button, Center, Heading, Image } from "@chakra-ui/react";
+import { Box, Button, Center, Heading, Image, Text } from "@chakra-ui/react";
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function HomePage() {
     const handleWhatsAppClick = () => {
-      window.location.href = 'https://api.whatsapp.com/send?phone=+5581996551624';
+        window.location.href = 'https://api.whatsapp.com/send?phone=+5581996551624';
     };
-  
+
     const handleEmailClick = () => {
-      window.location.href = 'mailto:micaelaeeloyse22@gmail.com';
+        window.location.href = 'mailto:micaelaeeloyse22@gmail.com';
     };
-  
+
     return (
         <><Box p={4} bg="#FFF5EE">
             <Center>
@@ -28,16 +29,18 @@ export default function HomePage() {
         </Box><Box p={4} bg="#A52A2A" position="relative">
                 <Box display="flex" alignItems="center" justifyContent="space-between" height="100%">
                     <div>
-                        <h1>Precisa de Ajuda pra enfrentar <br /> as dificuldades da Vida?</h1>
-                        <p>Olá, Sou Micaela Santos, psicóloga.</p>
-                        <p>
-                            <strong>
-                                Vamos conversar?
-                            </strong>
-                        </p>
+                        <Text fontFamily="Calisto MT" fontSize='2rem' marginBottom='8px' color="white">
+                            Precisa de Ajuda pra enfrentar <br /> as dificuldades da Vida?
+                        </Text>
+                        <Text fontSize="1.2rem" fontFamily="Poppins, sans-serif" marginBottom="8px">
+                            Olá, sou Micaela Santos, psicóloga.
+                        </Text>
+                        <Text fontSize="1.2rem" fontFamily="Poppins, sans-serif" marginBottom="16px">
+                            <strong>Vamos conversar?</strong>
+                        </Text>
 
-                        <Button colorScheme="whatsapp" onClick={handleWhatsAppClick} mb={4}>
-                            Entrar em Contato pelo WhatsApp
+                        <Button colorScheme="whatsapp" onClick={handleWhatsAppClick} mb={4} leftIcon={<FaWhatsapp />}>
+                            Agende sua primeira consulta
                         </Button>
                     </div>
 
@@ -58,4 +61,4 @@ export default function HomePage() {
                 </Button>
             </Box></>
     );
-  };
+};
