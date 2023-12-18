@@ -3,12 +3,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 export default function HomePage() {
     const handleWhatsAppClick = () => {
-        window.location.href = 'https://api.whatsapp.com/send?phone=+5581996551624';
-    };
-
-    const handleEmailClick = () => {
-        window.location.href = 'mailto:micaelaeeloyse22@gmail.com';
-    };
+        window.open('https://wa.me/5581996551624', '_blank');
+    };    
 
     return (
         <><Box p={4} bg="#FFF5EE">
@@ -29,17 +25,27 @@ export default function HomePage() {
         </Box><Box p={4} bg="#A52A2A" position="relative">
                 <Box display="flex" alignItems="center" justifyContent="space-between" height="100%">
                     <div>
-                        <Text fontFamily="Calisto MT" fontSize='2rem' marginBottom='8px' color="white">
+                        <Text fontFamily="'Century Gothic', sans-serif" fontStyle="italic" fontSize='2.0rem' marginLeft="50px" marginBottom='8px' marginTop="-70px" color="white" textAlign="right">
                             Precisa de Ajuda pra enfrentar <br /> as dificuldades da Vida?
                         </Text>
-                        <Text fontSize="1.2rem" fontFamily="Poppins, sans-serif" marginBottom="8px">
-                            Olá, sou Micaela Santos, psicóloga.
+                        <Text fontSize="1.5rem" fontFamily="'Candara', sans-serif" marginTop="60px" marginLeft="50px" marginBottom="8px" color="white" >
+                            Olá, sou Micaela Santos, psicóloga clínica.
                         </Text>
-                        <Text fontSize="1.2rem" fontFamily="Poppins, sans-serif" marginBottom="16px">
-                            <strong>Vamos conversar?</strong>
+                        <Text fontSize="1.5rem" fontFamily="'Candara', sans-serif" fontWeight="bold" marginTop="-15px" marginLeft="50px" marginBottom="8px" color="white">
+                            Vamos conversar?
                         </Text>
 
-                        <Button colorScheme="whatsapp" onClick={handleWhatsAppClick} mb={4} leftIcon={<FaWhatsapp />}>
+                        <Button onClick={handleWhatsAppClick}
+                            mb={4}
+                            leftIcon={<FaWhatsapp />}
+                            marginTop="50px"
+                            marginLeft="50px"
+                            sx={{
+                                background: 'linear-gradient(to left, rgba(250, 128, 114, 0.5), #FA8072)', // Direita para esquerda, terminando em #FA8072 com opacidade 0.5
+                                '&:hover': {
+                                    background: 'linear-gradient(to left, #FA8072, rgba(250, 128, 114, 0.2))',
+                                },
+                            }}>
                             Agende sua primeira consulta
                         </Button>
                     </div>
@@ -55,10 +61,7 @@ export default function HomePage() {
                             WebkitMaskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent 70%)', // Para navegadores baseados no Webkit
                         }} />
                 </Box>
-            </Box><Box>
-                <Button onClick={handleEmailClick}>
-                    Enviar Mensagem por E-mail
-                </Button>
-            </Box></>
+            </Box>
+        </>
     );
 };
