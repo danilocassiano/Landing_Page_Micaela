@@ -1,8 +1,8 @@
 import React from 'react';
 import { ChakraProvider, CSSReset } from '@chakra-ui/react';
-import HomePage from './index';
+import HomePage from './pages/Homepage';
 
-function App() {
+export default function App() {
   return (
     <ChakraProvider>
       <CSSReset />
@@ -10,5 +10,3 @@ function App() {
     </ChakraProvider>
   );
 }
-
-export default App;
