@@ -41,7 +41,7 @@ export default function HomePage() {
                             marginTop="50px"
                             marginLeft="50px"
                             sx={{
-                                background: 'linear-gradient(to left, rgba(250, 128, 114, 0.5), #FA8072)', // Direita para esquerda, terminando em #FA8072 com opacidade 0.5
+                                background: 'linear-gradient(to left, rgba(250, 128, 114, 0.5), #FA8072)',
                                 '&:hover': {
                                     background: 'linear-gradient(to left, #FA8072, rgba(250, 128, 114, 0.2))',
                                 },
