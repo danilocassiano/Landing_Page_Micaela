@@ -6,7 +6,10 @@ import { constants } from '../../config/constants';
 
 function Email() {
   return (
-    <Link href={`mailto:${constants.contato.email}`}>
+    <Link
+        target='_blank' 
+        href={`mailto:${constants.contato.email}`}
+    >
                 <Button>
                     Enviar Mensagem por E-mail
                 </Button>

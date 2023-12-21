@@ -7,7 +7,7 @@ export default function HomePage() {
 
     return (
         <Box
-            w='100vw'
+            maxW='100vw'
         >
             <Header />
             <Box p={4} bg="#A52A2A" h='100vh' position="relative">

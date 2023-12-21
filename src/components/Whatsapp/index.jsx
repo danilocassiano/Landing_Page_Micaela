@@ -7,7 +7,10 @@ import { constants } from '../../config/constants';
 function Whatsapp() {
 
     return (
-        <Link href={`https://api.whatsapp.com/send?phone=${constants.contato.whatsapp}&message=ola`}>
+        <Link 
+            target='_blank'
+            href={`https://api.whatsapp.com/send?phone=${constants.contato.whatsapp}`}
+        >
             <Button colorScheme="whatsapp" mb={4}>
                 Entrar em Contato pelo WhatsApp
             </Button>
