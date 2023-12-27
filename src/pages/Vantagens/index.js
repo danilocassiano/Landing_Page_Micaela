@@ -19,8 +19,8 @@ export default function Vantagens() {
             <Image
                 src={process.env.PUBLIC_URL + "/Vantagens.png"}
                 alt="Logo"
-                style={{ zIndex: 2, marginTop: "-50%" }}
-                marginLeft= "-45%"
+                style={{ zIndex: 2, marginTop: "-40%" }}
+                marginLeft= "-45%"                
             />
             <Text
                 fontFamily="'Century Gothic', sans-serif"
@@ -30,7 +30,7 @@ export default function Vantagens() {
                 color="#FA8072"
                 textAlign="right"                
                 marginRight="-35%"
-                marginTop='-44%'
+                marginTop='-38%'
             >
                 Entenda as Vantagens da Terapia On-line
             </Text>
