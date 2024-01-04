@@ -1,13 +1,11 @@
-import { Box, Image, Text, Button } from "@chakra-ui/react";
-import { FaWhatsapp } from 'react-icons/fa';
+import { Box, Image, Text, Flex } from "@chakra-ui/react";
+import { Whatsapp1 } from '../../components/Whatsapp';
+
 
 export default function Vantagens() {
-    const handleWhatsAppClick = () => {
-        window.open('https://wa.me/5581996551624', '_blank');
-    };
 
     return (
-        <Box display="flex" flexDirection="column" alignItems="center">
+        <Box display="flex" flexDirection="column" alignItems="center" overflow="hidden" w="100vw">
             <Box
                 w="280px"
                 h="700px"
@@ -20,7 +18,7 @@ export default function Vantagens() {
                 src={process.env.PUBLIC_URL + "/Vantagens.png"}
                 alt="Logo"
                 style={{ zIndex: 2, marginTop: "-40%" }}
-                marginLeft= "-45%"                
+                marginLeft="-45%"
             />
             <Text
                 fontFamily="'Century Gothic', sans-serif"
@@ -28,7 +26,7 @@ export default function Vantagens() {
                 fontWeight="bold"
                 fontSize='1.6rem'
                 color="#FA8072"
-                textAlign="right"                
+                textAlign="right"
                 marginRight="-35%"
                 marginTop='-38%'
             >
@@ -119,23 +117,13 @@ export default function Vantagens() {
                         </Text>
                     </Box>
                 </Box>
-
-                {/* Botão de WhatsApp */}
-                <Button
-                    onClick={handleWhatsAppClick}
-                    mb={4}
-                    mt="30px"
-                    ml="-110%"
-                    leftIcon={<FaWhatsapp />}
-                    sx={{
-                        background: 'linear-gradient(to left, rgba(250, 128, 114, 0.5), #FA8072)',
-                        '&:hover': {
-                            background: 'linear-gradient(to left, #FA8072, rgba(250, 128, 114, 0.2))',
-                        },
-                    }}
+                <Flex
+                    ml="-100%"
                 >
-                    Agende sua primeira consulta
-                </Button>
+                    <Whatsapp1 style={{ flex: '1', minWidth: '0' }} />
+                </Flex>
+
+
             </Box>
         </Box>
     );
