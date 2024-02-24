@@ -35,7 +35,7 @@ function Cuidados() {
     color='white'
     pd='5rem'
     gap={'5rem'}
-    bgGradient= 'linear(to right, #a52a2a, #a52)'
+    bgGradient= 'linear(to down, #fff, #ffcaba)'
     >
     <Heading
         fontFamily="Poppins"
