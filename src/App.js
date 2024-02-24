@@ -3,6 +3,7 @@ import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import HomePage from './pages/Homepage';
 import Vantagens from './pages/Vantagens';
 import Modalidades from './pages/Modalidades';
+import Apresentacao from './pages/Apresentacao';
 import Header from './components/Header';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
       <HomePage />
       <Vantagens />
       <Modalidades />
+      <Apresentacao />
     </ChakraProvider>
   );
 }

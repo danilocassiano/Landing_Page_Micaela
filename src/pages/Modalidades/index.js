@@ -1,5 +1,6 @@
-import { Box, Text, Grid } from "@chakra-ui/react";
+import { Box, Text, Grid, Image } from "@chakra-ui/react";
 import CardModalidade from "../../components/CardModalidade";
+
 
 export default function Modalidades() {
 
@@ -32,13 +33,12 @@ export default function Modalidades() {
       ),
       frase: "Psicoterapia para LGBTQIA+",
     },
-    {
-      imagemSrc: "/Foto_Modalidades.JPG",
-    },
   ];
 
   return (
     <Box display="flex" flexDirection="column" alignItems="center">
+
+
 
       <Text
         fontFamily="'Century Gothic', sans-serif"
@@ -46,18 +46,25 @@ export default function Modalidades() {
         fontWeight="bold"
         fontSize="1.6rem"
         marginRight="-40px"
-        marginTop="100px"
-        marginBottom="5%"
+        marginTop="50px"
+        marginBottom="2%"
         color="#FA8072"
         textAlign="right"
       >
         <strong>Modalidades de Atendimento:</strong>
       </Text>
-      <Grid templateColumns="repeat(2, 1fr)" gap={4} justifyContent="center">
+      <Grid templateColumns="repeat(3, 1fr)" gap={4} justifyContent="center">
         {data.map((bloco, index) => (
           <CardModalidade key={index} {...bloco} />
         ))}
       </Grid>
-    </Box>
+      <Box style={{ textAlign: 'center' }}>
+        <Image
+          src={"/Foto_Modalidades_Capa.jpg"}
+          alt="Imagem_Modalidades"
+          style={{ maxWidth: '40%', maxHeight: '40%', margin: 'auto' }}
+        />
+      </Box>
+    </Box >
   );
 }

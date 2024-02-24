@@ -118,7 +118,7 @@ export default function Vantagens() {
                     </Box>
                 </Box>
                 <Flex
-                    ml="-100%"
+                    ml="-150%"
                 >
                     <Whatsapp1 style={{ flex: '1', minWidth: '0' }} />
                 </Flex>

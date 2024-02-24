@@ -4,13 +4,14 @@ const CardModalidade = ({ imagemSrc, texto, frase }) => {
     return (
         <Box>
             <VStack
-                width="400px"
-                height="900px"
+                width="300px"
+                height="600px"
                 borderRadius="10px"
                 overflow="hidden"
-                bgGradient="linear(rgba(165, 42, 42, 0.8), rgba(165, 42, 42, 1))"
-                mb="40px"
-                mx="30px"
+                //bgGradient="linear(rgba(165, 42, 42, 0.8), rgba(165, 42, 42, 1))"
+                background="linear-gradient(rgba(250, 128, 114, 0.8), rgba(250, 42, 42, 0.8))"
+                mb="20px"
+                mx="10px"
             >
                 {imagemSrc && (
                     <Box
@@ -27,6 +28,7 @@ const CardModalidade = ({ imagemSrc, texto, frase }) => {
                             height="100%"
                             objectFit="cover"
                             borderTopRadius="10px"
+                            opacity={0.8}
                         />
 
                         {frase && (
@@ -34,7 +36,7 @@ const CardModalidade = ({ imagemSrc, texto, frase }) => {
                                 fontStyle="italic"
                                 fontWeight="bold"
                                 color="white"
-                                fontSize="1.5rem"
+                                fontSize="1.0rem"
                                 position="absolute"
                                 top="50%"
                                 left="50%"
@@ -50,13 +52,20 @@ const CardModalidade = ({ imagemSrc, texto, frase }) => {
 
                 {texto && (
                     <Box flex="1">
-                        <Text mb="2" lineHeight="2" color="white" marginTop="1%" margin="5%" textAlign="center">
+                        <Text mb="2"
+                            lineHeight="2"
+                            color="white"
+                            marginTop="1%"
+                            margin="5%"
+                            textAlign="center"
+                            fontSize="0.7rem" >
                             {texto}
                         </Text>
                     </Box>
                 )}
-            </VStack>
+            </VStack>            
         </Box>
+
     );
 };
 
