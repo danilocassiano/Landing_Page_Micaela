@@ -5,6 +5,7 @@ import Vantagens from './pages/Vantagens';
 import Modalidades from './pages/Modalidades';
 import Apresentacao from './pages/Apresentacao';
 import Header from './components/Header';
+import Cuidados from './pages/Cuidados';
 
 export default function App() {
   return (
@@ -14,7 +15,8 @@ export default function App() {
       <HomePage />
       <Vantagens />
       <Modalidades />
-      <Apresentacao />
+      <Cuidados />
+      <Apresentacao />      
     </ChakraProvider>
   );
 }
