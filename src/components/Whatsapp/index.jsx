@@ -6,13 +6,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 function Whatsapp({...rest}) {
     return (
-        <Link 
-            target='_blank'
-            href={`https://api.whatsapp.com/send?phone=${constants.contato.whatsapp}`}
-        >
+        
             <Button                    
-                mb={4}
-                mt="30px"
                 leftIcon={<FaWhatsapp />}
                 sx={{
                     background: 'linear-gradient(to left, rgba(250, 128, 114, 0.5), #FFFFE0)',
@@ -21,10 +16,15 @@ function Whatsapp({...rest}) {
                     },
                 }}
                 {...rest}
-            >
+                >               
+             <Link
+                    target='_blank'
+                    href={`https://api.whatsapp.com/send?phone=${constants.contato.whatsapp}`}
+                    
+                >
                 Agende sua primeira consulta
+                </Link>
             </Button>
-        </Link>
     );
 }
 
