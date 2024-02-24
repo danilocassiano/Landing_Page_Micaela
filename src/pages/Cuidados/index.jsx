@@ -63,7 +63,9 @@ function Cuidados() {
             )
     }
     </SimpleGrid>
-    <Whatsapp />
+    <Whatsapp 
+        mb='5rem'
+    />
   </Center>
   );
 }
