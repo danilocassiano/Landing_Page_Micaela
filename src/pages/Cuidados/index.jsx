@@ -30,30 +30,32 @@ function Cuidados() {
   return ( 
   <Center
     w='100vw'
-    h='100vh'
+    maxW='1900px'
+    minH='100vh'
     flexDir='column'
-    color='white'
+    color='#222121'
     pd='5rem'
     gap={'5rem'}
-    bgGradient= 'linear(to down, #fff, #ffcaba)'
+    bgGradient= 'linear( #fff, #ffcaba)'
     >
     <Heading
         fontFamily="Poppins"
-    > o que a terapia pode cuidar ?</Heading>
+    > O que a terapia pode cuidar ?</Heading>
 
     <SimpleGrid 
         templateColumns={'1fr 1fr'}
-        columnGap='10'
+        columnGap='20'
         rowGap='5'
-        w='60%'
+        w='50%'
     >
     {
         content.map(sick => 
             (
                 <HStack
-                   borderBottom='1px solid rgba(255   ,255   ,255   ,0.1)'
+                   borderBottom='1px solid #0505051c'
                    pb='.3rem'
-
+                   key={sick}
+                   fontFamily="Poppins"
                 >
                     <FaCheck /><Text>{sick[0].toUpperCase() + sick.substring(1)}</Text>
                 </HStack>
