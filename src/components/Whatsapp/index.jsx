@@ -4,7 +4,7 @@ import React from 'react';
 import { constants } from '../../config/constants';
 import { FaWhatsapp } from 'react-icons/fa';
 
-function Whatsapp() {
+function Whatsapp({...rest}) {
     return (
         <Link 
             target='_blank'
@@ -20,6 +20,7 @@ function Whatsapp() {
                         background: 'linear-gradient(to left, #FFFFE0, rgba(250, 128, 114, 0.2))',
                     },
                 }}
+                {...rest}
             >
                 Agende sua primeira consulta
             </Button>
