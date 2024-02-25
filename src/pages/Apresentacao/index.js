@@ -1,7 +1,4 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
-import { constants } from '../../config/constants';
-
+import { Box, Image, Text } from "@chakra-ui/react";
 
 export default function Apresentacao() {
 

@@ -3,6 +3,7 @@ import React from 'react';
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { constants } from '../../config/constants';
 
+
 function RedesSociais() {
     const [hover, setHover] = React.useState(false);
 
