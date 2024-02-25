@@ -15,39 +15,7 @@ export default function Apresentacao() {
                 zIndex="1"
                 position="relative"
             ></Box>
-            <Box
-                maxW="100vw"
-                maxH={'80vh'}
-                overflow="hidden"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                bg="#FA8072"
-            >
-                <Flex
-                    position="absolute"
-                    left="50%"
-                    top="90%"
-                    transform="translateX(-50%)"
-                    zIndex="1"
-                >
-                    <div
-                        style={{ backgroundColor: '#FFC0CB', borderRadius: '50%', padding: '8px', textAlign: 'center' }}
-                    >
-                        <a href={`https://api.whatsapp.com/send?phone=${constants.contato.whatsapp}`}>
-                            <FaWhatsapp style={{ marginLeft: '10px', fontSize: '24px', color: 'white' }} />
-                        </a>
-                    </div>
-                    <div
-                        style={{ backgroundColor: '#FFC0CB', borderRadius: '50%', padding: '8px', textAlign: 'center' }}
-                    >
-                        <a href="https://www.instagram.com/micaelasantos.psi">
-                            <FaInstagram style={{ marginLeft: '10px', fontSize: '24px', color: 'white' }} />
-                        </a>
-                    </div>
-
-                </Flex>
-            </Box>
+            
             <Image
                 width={'30%'}
                 left={'5%'}

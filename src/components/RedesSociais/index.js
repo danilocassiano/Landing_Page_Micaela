@@ -1,37 +1,32 @@
 import { Box, HStack, Link, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
-import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { constants } from '../../config/constants';
 
 function RedesSociais() {
-    const [hover, setHover] = React.useState(true);
+    const [hover, setHover] = React.useState(false);
 
     const redesSociais = [
         {
             nome: 'Facebook',
-            color:'#020eb3',
-            link: 'www.google.com',
+            color: '#020eb3',
+            link: 'https://www.facebook.com/micaelasantos.psi/',
             icon: <FaFacebook />
         },
         {
-            nome: 'Facebook',
-            color:'#d30348',
-            link: 'www.google.com',
+            nome: 'Instagram',
+            color: '#d30348',
+            link: 'https://www.instagram.com/micaelasantos.psi/',
             icon: <FaInstagram />
         },
         {
-            nome: 'Facebook',
-            color:'#02bd12',
-            link: 'www.google.com',
+            nome: 'Whatsapp',
+            color: '#02bd12',
+            link: `https://api.whatsapp.com/send?phone=${constants.contato.whatsapp}`,
             icon: <FaWhatsapp />
-        },
-        {
-            nome: 'twitter',
-            color:'#0272db',
-            link: 'www.google.com',
-            icon: <FaTwitter />
-        },
-
+        },        
     ]
+
     return (
         <Box
             position='fixed'
@@ -73,9 +68,9 @@ function RedesSociais() {
                 >
                     {redesSociais.map((item) => (
                         <Box key={item.nome} fontSize='2.5rem' color={item.color}
-                        rounded={'10'}
-                        boxShadow={'2px 2px 2px #3020208e'}
-                        p={1}
+                            rounded={'10'}
+                            boxShadow={'2px 2px 2px #3020208e'}
+                            p={1}
                         >
                             <Link href={item.link} target='_blank'>
                                 {item.icon}
